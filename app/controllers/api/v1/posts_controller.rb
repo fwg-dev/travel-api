@@ -1,4 +1,6 @@
 class Api::V1::PostsController < ApplicationController
+  before_action :set_post, only: [:show, :update, :destroy]
+  before_action :set_trip
   def index
     # byebug
    render json: Post.all
@@ -6,7 +8,6 @@ class Api::V1::PostsController < ApplicationController
 
   def create 
   #  puts post_params 
-   
     @post =Post.new(post_params)
     if @post.save 
       render json: post
@@ -40,6 +41,9 @@ class Api::V1::PostsController < ApplicationController
 
   def set_post
     @post = Post.find_by(id: params[:id])
+  end
+  def set_trip
+    @trip = Trip.find(params[:trip_id])
   end
 
   def post_params 
