@@ -2,10 +2,11 @@ Rails.application.routes.draw do
 
   namespace :api do 
     namespace :v1 do
-      resources :posts
-      resources :trips
+       resources :trips do
+         resources :posts
+      end 
     end 
-  end 
-end
+  end
+end 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
