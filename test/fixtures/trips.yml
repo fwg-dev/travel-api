@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  city: MyString
+  country: MyString
+  date_of_trip: 2020-11-15
+  img_url: MyString
+
+two:
+  title: MyString
+  city: MyString
+  country: MyString
+  date_of_trip: 2020-11-15
+  img_url: MyString
