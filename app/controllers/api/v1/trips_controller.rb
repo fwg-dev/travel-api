@@ -5,15 +5,17 @@ class Api::V1::TripsController < ApplicationController
   # GET /attractions
   def index
     # byebug
-   render json: Trip.all
+    @trips = Trip.all 
+   render json: @trips
+
   end
 
   def create 
   #  puts trip_params 
-   
+  #  byebug
     @trip =Trip.new(trip_params)
     if @trip.save 
-      render json: trip
+      render json: @trip
     else 
       render json: { message: @trip.errors }, status: 400
     end

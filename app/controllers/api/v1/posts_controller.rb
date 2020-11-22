@@ -3,14 +3,15 @@ class Api::V1::PostsController < ApplicationController
   before_action :set_trip
   def index
     # byebug
-   render json: Post.all
+    @posts = Post.all
+   render json: @posts
   end
 
   def create 
   #  puts post_params 
-    @post =Post.new(post_params)
+    @post =@trip.posts.new(post_params)
     if @post.save 
-      render json: post
+      render json: @post
     else 
       render json: { message: @post.errors }, status: 400
     end
@@ -29,11 +30,15 @@ class Api::V1::PostsController < ApplicationController
   end
 
   def destroy 
-    if @post.destroy 
-      render status: 204
+    byebug
+    @post = Post.find(params["id"])
+    @trip = Trip.find(@post.trip_id)
+    if @post.destroy
+    render json: @trip
     else 
-      render json:{ message: "Unable to Delete Post"}, status: 400
-    end
+      render json: { message: @post.errors }, status: 400
+  end
+  
 
    end
   

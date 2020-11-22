@@ -31,7 +31,7 @@ dublin = Trip.create(title: "A crisp pint of the black stuff(Guinness)", city: "
 
 # adding site descriptions to our trips 
 # 1.
- nairobi_park_desc = Post.create(heading: "Trip of a lifetime", description: "Kenya's first national park, Nairobi National Park is a haven for wildlife and only seven kilometers from the skyscrapers of Nairobi's city center. The park is also a rhino sanctuary, which protects more than 50 of these critically endangered creatures. In addition to the rhinos, you can see lions, gazelles, buffaloes, warthogs, cheetahs, zebras, giraffes, and ostriches, and more than 400 species of birds have been recorded in the wetlands.
+ nairobi_park_desc = Post.create(heading: "Game drive in the city", description: "Kenya's first national park, Nairobi National Park is a haven for wildlife and only seven kilometers from the skyscrapers of Nairobi's city center. The park is also a rhino sanctuary, which protects more than 50 of these critically endangered creatures. In addition to the rhinos, you can see lions, gazelles, buffaloes, warthogs, cheetahs, zebras, giraffes, and ostriches, and more than 400 species of birds have been recorded in the wetlands.
 
   Nairobi National Park is also a famous ivory burning site. In 1989, President Moi ignited 12 tons of elephant tusks and rhino horns here, boosting the country's conservation image on the world stage. Today, a monument marks this historic site. The Nairobi Safari Walk is a popular attraction offering animal lovers the chance to spot wildlife on foot, and walking trails weave around the area known as Hippo Pools. At the park's main gate, you can bond with orphaned baby elephants and rhinos at the David Sheldrick Wildlife Trust." , 
    img: "https://www.planetware.com/photos-large/KEN/kenya-nairobi-nairobi-national-park.jpg", 
@@ -56,5 +56,13 @@ mombasa_desc= Post.create(heading:"A day at the beach",
   img: "https://www.planetware.com/photos-large/KEN/kenya-malindi.jpg", 
   
   trip_id: malindi.id)
+
+  # -----------------
+
+  dublin_desc = Post.create(heading: "Mesmerizing and Wonderful",  description: "Loved every minute of it. Great history into the Guinness family and their relationship with Dublin. Loved every minute of it. Great history into the Guinness family and their relationship with Dublin.", 
+    
+    img: "https://images.unsplash.com/photo-1531947044935-8599a939ab85?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Z3Vpbm5lc3N8ZW58MHx8MHw%3D&auto=format&fit=crop&w=1100&q=60", 
+    
+    trip_id: dublin.id)
 
 
